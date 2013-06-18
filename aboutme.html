@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+  
+  <ul>
+    <li>Name: <span id="name"></span>
+    <li>Age:  <span id="age"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+  <script>
+   document.body.style.fontFamily = 'Arial, sans-serif';
+   document.getElementById('name').innerHTML = 'Zena Bielewicz';
+   document.getElementById('age').innerHTML = '31';
+   document.getElementById('hometown').innerHTML = 'Toronto';
+   var items = document.getElementsByTagName = ('li' );
+    for(var x = 0; x < items.length; x ++) {
+      items[x].className = 'listitem';
+    };
+    var myPic = document.createElement('img');
+    myPic.src = 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS8aq8fDynp2jhCcYxMWJx9Sh44S4KAbQLS0SLMs5ahF3NF1zNcfg';
+    document.body.appendChild(myPic);
+  </script>
+ </body>
+</html>
+  

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Book List</title>
+</head>
+<body>
+  <h1>My Book List</h1>
+
+
+<script>
+var books = [ 
+  {'title': "Beloved",
+  'author': "Toni Morrison",
+  'alreadyRead': true
+  },
+  {'title': "Walking With Einstein",
+   'author': 'Someone',
+   'alreadyRead': false
+  }];
+
+// for(var x = 0; x < books.length; x++) {
+//   var bookP = document.createElement('p');
+//   var bookDescription = document.createTextNode(books[x].title + ' by ' + books[x].author);
+//   bookP.appendChild(bookDescription);
+//   document.body.appendChild(bookP);
+// }
+var bookList = document.createElement('ul');
+for (var i = 0; i < books.length; i++) {
+  var bookItem = document.createElement('li');
+  var bookImg = document.createElement('img');
+  bookImg.src = books[i].img;
+  bookItem.appendChild(bookImg);
+  var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+  bookItem.appendChild(bookDescription);
+  if (books[i].alreadyRead) {
+    bookItem.style.color = 'grey';
+  }
+  bookList.appendChild(bookItem);
+}
+document.body.appendChild(bookList);
+
+
+
+</script>
+</body>
+</html>
